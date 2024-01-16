@@ -116,6 +116,7 @@ def jadeR(X):
 
 	    # GB: we do some checking of the input arguments and copy data to new
     except Exception as e:
+    print(f'An error occurred during jadeR: {e}')
         print(f'An error occurred during jadeR: {e}')
 	# variables to avoid messing with the original input. We also require double
 	# precision (float64) and a numpy matrix type for X.
