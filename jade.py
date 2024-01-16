@@ -445,6 +445,7 @@ def main(X):
     B = jadeR(X)
 except Exception as e:
     print(f'An error occurred during jadeR: {e}')
+    print(f'An error occurred during jadeR: {e}')
 	Y = B * matrix(X)
 	return Y.T
 
