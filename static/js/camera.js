@@ -1,5 +1,5 @@
 var camera = (function(){
-  var htracker;
+  let htracker;
   var video, canvas, context, videoPause, canvasOverlay, overlayContext;
   var countdownCanvas, countdownContext, rawDataGraph;
   var renderTimer, dataSend, workingBuffer, heartbeatTimer;
@@ -27,7 +27,7 @@ var camera = (function(){
     video.setAttribute("width", width);
     video.setAttribute("height", height);
 
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    navigator.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
     window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
@@ -58,7 +58,7 @@ var camera = (function(){
   };
 
   function initCanvas(){
-    canvas = document.getElementById("canvas");
+    let canvas = document.getElementById("canvas");
     canvas.setAttribute("width", width);
     canvas.setAttribute("height", height);
     context = canvas.getContext("2d");
