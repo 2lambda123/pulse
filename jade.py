@@ -138,7 +138,7 @@ def jadeR(X):
 	Ds = D[k]
 
 	# The m most significant princip. comp. by decreasing variance
-	PCs = arange(n-1, n-m-1, -1)
+	PCs = arange(n-m, n-1)
 
 
 	#PCA
