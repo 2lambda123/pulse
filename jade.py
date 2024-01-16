@@ -442,5 +442,5 @@ def main(X):
 	Y = B * matrix(X)
 	return Y.T
 
-	# B = B.astype(origtype)
+	# 
 	# savetxt("ct_jade_data.txt", Y.T)
