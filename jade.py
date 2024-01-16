@@ -46,6 +46,12 @@ from numpy import abs, append, arange, arctan2, argsort, array, concatenate, \
 from numpy.linalg import eig, pinv
 
 def jadeR(X):
+    try:
+        # Existing code of the function
+    except Exception as e:
+        error_message = f'An error occurred: {str(e)}'
+        print(error_message)
+        return error_message
 	"""
 	Blind separation of real signals with JADE.
 
@@ -438,6 +444,14 @@ def jadeR(X):
 
 
 def main(X):
+    try:
+        B = jadeR(X)
+        Y = B * matrix(X)
+        return Y.T
+    except Exception as e:
+        error_message = f'An error occurred: {str(e)}'
+        print(error_message)
+        return error_message
 	B = jadeR(X)
 	Y = B * matrix(X)
 	return Y.T
