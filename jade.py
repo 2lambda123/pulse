@@ -37,6 +37,8 @@ This module contains only one function, jadeR, which does blind source
 separation of real signals. Hopefully more ICA algorithms will be added
 in the future.
 
+import numpy as np
+
 jadeR requires NumPy.
 """
 
