@@ -441,7 +441,7 @@ def jadeR(X):
 
 def main(X):
 	B = jadeR(X)
-	Y = B * matrix(X)
+	Y = B @ matrix(X)
 	return Y.T
 
 	# B = B.astype(origtype)
