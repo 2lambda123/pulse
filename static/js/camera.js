@@ -1,4 +1,4 @@
-var camera = (function(){
+const camera = (function(){ // Changed 'var' to 'const' for camera initialization
   var htracker;
   var video, canvas, context, videoPause, canvasOverlay, overlayContext;
   var countdownCanvas, countdownContext, rawDataGraph;
@@ -27,7 +27,7 @@ var camera = (function(){
     video.setAttribute("width", width);
     video.setAttribute("height", height);
 
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    navigator.mediaDevices.getUserMedia = navigator.mediaDevices.getUserMedia || navigator.mediaDevices.webkitGetUserMedia || navigator.mediaDevices.mozGetUserMedia || navigator.mediaDevices.msGetUserMedia; // Updated navigator.getUserMedia to navigator.mediaDevices.getUserMedia
 
     window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
@@ -36,7 +36,7 @@ var camera = (function(){
     var buttonBar = document.getElementById("buttonBar");
     var allowWebcam = document.getElementById("allowWebcam");
 
-    if (navigator.getUserMedia){
+    if (navigator.mediaDevices.getUserMedia){
       navigator.getUserMedia({
         video: true,
         audio: false
