@@ -1,7 +1,7 @@
 ### NOTE: This project is no longer maintained -- it was a code school project from several years ago. As of 7/2017 I am on a one year travel haitus and am slowly (while on trains planes and in automobiles) dragging this project into a frontend and node backend module that can be applied to any project your heart desires. I will ignore any tickets opened on *this* repo, but feel free to fork (keep the license in mind, please) and have a good time with this for now.
 
 
-Pulse
+Pulse - Non-contact Heartrate Detection Application
 ===========
 
 Pulse is a browser-based, non-contact heartrate detection application. It can derive a heartrate in thirty seconds or less, requiring only a browser and a webcam. Based on recent research in photoplethysmography and signal processing, the heartbeat is derived from minuscule changes in pixels over time.
@@ -20,6 +20,8 @@ Click through for more detailed explanations of the process and technology.
 
 ### Usage
 
+### How to Run
+
 #### Installation
 recommended to use a virtual environment. If that's not your style-- the dependencies are in `requirements.txt`
 
@@ -29,7 +31,9 @@ source ./env/bin/activate
 pip install -r requirements.txt
 ```
 
-I had some issues with NumPy installing most recently on OSX 10.9, suppressing clang errors helped:
+#### Troubleshooting
+
+If you encounter issues when installing NumPy on OSX 10.9, try suppressing clang errors using the following: 
 
 ```
 export CFLAGS=-Qunused-arguments
